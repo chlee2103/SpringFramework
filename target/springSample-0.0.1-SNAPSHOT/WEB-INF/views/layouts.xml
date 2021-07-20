@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+<definition name="login.tiles" template="/WEB-INF/views/login/login.jsp">
+</definition>
+
+<definition name="regi.tiles" template="/WEB-INF/views/login/regi.jsp">
+</definition>
+
+<definition name="bbslist.tiles" template="/WEB-INF/views/layouts-tiles.jsp">
+	<put-attribute name="header" value="/WEB-INF/views/commons/header.jsp"/>
+	<put-attribute name="top_inc" value="/WEB-INF/views/commons/top_inc.jsp"/>
+	<put-attribute name="top_menu" value="/WEB-INF/views/commons/top_menu.jsp"/>
+	<put-attribute name="left_menu" value="/WEB-INF/views/bbs/bbs_leftmenu.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbslist.jsp"/>
+	<put-attribute name="bottom_inc" value="/WEB-INF/views/commons/bottom_inc.jsp"/>
+</definition>
+
+<definition name="bbswrite.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbswrite.jsp"/>
+</definition>
+	
+<definition name="bbsdetail.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbsdetail.jsp"/>
+</definition>
+
+<definition name="bbsupdate.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbsupdate.jsp"/>
+</definition>
+
+<definition name="bbsanswer.tiles" extends="bbslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/bbs/bbsanswer.jsp"/>
+</definition>
+
+<!-- 일정관리 -->
+<definition name="calendarlist.tiles" extends="bbslist.tiles">
+	<put-attribute name="left_menu" value="/WEB-INF/views/calendar/cal_leftmenu.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/calendar/calendarList.jsp"/>
+</definition>
+
+<definition name="calwrite.tiles" extends="calendarlist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/calwrite.jsp"/>
+</definition>
+
+<definition name="caldetail.tiles" extends="calendarlist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/caldetail.jsp"/>
+</definition>
+
+<definition name="calupdate.tiles" extends="calendarlist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/calupdate.jsp"/>
+</definition>
+
+<definition name="callist.tiles" extends="calendarlist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/calendar/callist.jsp"/>
+</definition>
+
+<!-- 일정관리 pulg-->
+<definition name="calendarpluglist.tiles" extends="bbslist.tiles">
+	<put-attribute name="left_menu" value="/WEB-INF/views/calendarplug/calplug_leftmenu.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/calendarplug/calpluglist.jsp"/>
+</definition>
+
+<!-- 자료실 -->
+<definition name="pdslist.tiles" extends="bbslist.tiles">
+	<put-attribute name="left_menu" value="/WEB-INF/views/pds/pds_leftmenu.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/pds/pdslist.jsp"/>
+</definition>
+<definition name="pdswrite.tiles" extends="pdslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/pds/pdswrite.jsp"/>
+</definition>
+<definition name="pdsdatail.tiles" extends="pdslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/pds/pdsdetail.jsp"/>
+</definition>
+<definition name="pdsupdate.tiles" extends="pdslist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/pds/pdsupdate.jsp"/>
+</definition>
+
+<!-- 투표 -->
+<definition name="polllist.tiles" extends="bbslist.tiles">
+	<put-attribute name="left_menu" value="/WEB-INF/views/poll/poll_leftmenu.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/views/poll/polllist.jsp"/>
+</definition>
+<definition name="pollmake.tiles" extends="polllist.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/poll/pollmake.jsp"/>
+</definition>
+
+</tiles-definitions>
+
+
+
+
+
+
+
+    
